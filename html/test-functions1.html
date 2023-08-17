@@ -13,7 +13,7 @@
         box-sizing: border-box;
       }
     </style>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
   </head>
 
   <body>
@@ -33,11 +33,17 @@
     const para = document.createElement("p");
 
     // Add your code here
+
+    function random(start = 0, end = 8) {
+      return Math.floor(Math.random() * (end - start)) + start;
+    }
+
     function chooseName() {
-      const extractRandom = Math.floor(Math.random() * names.length);
+      const extractRandom = names[Math.floor(random(1, 7)) - 1];
       return extractRandom;
     }
 
+    para.innerText = chooseName();
     // Don't edit the code below here!
 
     const section = document.querySelector("section");

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function add(input = 5) {
+        let sum = input + 7;
+        return sum;
+      }
+
+      function multiply(value1 = 2, value2 = 3) {
+        let sum = value1 * value2;
+        return sum;
+      }
+
+      function capitalize(value1) {
+        let str = "value1";
+        let capt = str.toUpperCase(1);
+        return capt;
+      }
+
+      function lastletter() {
+        let str = "lastletter";
+        let last = str.substring(0, 8) + str[9].charAt();
+        return last;
+      }
+
+      prompt("give a number:");
+    </script>
+  </body>
+</html>
