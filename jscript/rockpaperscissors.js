@@ -1,5 +1,5 @@
 function playRound(playerSelection, computerSelection) {
-  let playerSelection = prompt("Make your choice");
+  playerSelection = prompt("Make your choice");
   let caseConvertUserInput = playerSelection.toLowerCase();
   playerSelection = caseConvertUserInput;
 
@@ -10,28 +10,27 @@ function playRound(playerSelection, computerSelection) {
     return randomChoice;
   }
 
-  let computerSelection = getComputerChoice();
+  computerSelection = getComputerChoice();
+
+  //   prettier-ignore
 
   if (playerSelection === "paper" && computerSelection === "paper") {
-    console.log("It's a tie");
+    console.log("The computer chose" + " " + computerSelection + " " + "It's a tie");
   } else if (playerSelection === "rock" && computerSelection === "rock") {
-    console.log("It's a tie");
-  } else if (
-    playerSelection === "scissors" &&
-    computerSelection === "scissors"
-  ) {
-    console.log("It's a tie");
+    console.log("The computer chose" + " " + computerSelection + " " + "It's a tie");
+  } else if (playerSelection === "scissors" && computerSelection === "scissors") {
+    console.log("The computer chose" + " " + computerSelection + " " + "It's a tie");
   } else if (playerSelection === "paper" && computerSelection === "rock") {
-    console.log("you win congrats");
+    console.log("The computer chose" + " " + computerSelection + " " + "you win congrats");
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
-    console.log("you loose better luck next time");
+    console.log("The computer chose" + " " + computerSelection + " " + "you loose better luck next time");
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
     console.log("you win congrats");
-  } else if (playerSelection === "scissors " && computerSelection === "rock") {
-    console.log("you loose better luck next time");
+  } else if (playerSelection === "scissors "&& computerSelection === "rock") {
+    console.log("The computer chose" + " " + computerSelection + " " + "you loose better luck next time");
   } else if (playerSelection === "rock" && computerSelection === "paper") {
-    console.log("you loose better luck next time");
+    console.log("The computer chose" + " " + computerSelection + " " + "you loose better luck next time");
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
-    console.log("you win congrats");
+    console.log("The computer chose" + " " + computerSelection + " " + "you win congrats");
   }
 }
