@@ -1,0 +1,21 @@
+.banner {
+  margin-top: 3rem;
+  background-image: url(../assets/images/rock-paper-scissors.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid red;
+  height: 295px;
+  width: 950px;
+}
+
+body {
+  height: 100vh;
+  border: 1px solid red;
+  /* background-color: #16064a; */
+  background: linear-gradient(#75167f, #32c4d2);
+}
+
+#playBtn {
+  margin-top: 5rem;
+  margin-left: 5rem;
+}

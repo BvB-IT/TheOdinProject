@@ -1,3 +1,11 @@
+"use strict";
+window.onload = function () {
+  alert("page is loaded");
+};
+
+const playButton = document.getElementById("playBtn");
+playButton.addEventListener("click", game);
+
 function playRound(playerSelection, computerSelection) {
   playerSelection = prompt("Make your choice");
   let caseConvertUserInput = playerSelection.toLowerCase();
@@ -33,4 +41,16 @@ function playRound(playerSelection, computerSelection) {
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
     console.log("The computer chose" + " " + computerSelection + " " + "you win congrats");
   }
+}
+
+function game() {
+  let counter = 0;
+
+  while (counter <= 4) {
+    counter++;
+    playRound();
+    if (counter === 5) break;
+    // return playRound();
+  }
+  console.log("Game over");
 }
