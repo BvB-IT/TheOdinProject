@@ -1,7 +1,7 @@
 "use strict";
-window.onload = function () {
-  alert("page is loaded");
-};
+// window.onload = function () {
+//   alert("page is loaded");
+// };
 
 const playButton = document.getElementById("playBtn");
 playButton.addEventListener("click", game);
