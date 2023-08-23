@@ -3,13 +3,19 @@
 //   alert("page is loaded");
 // };
 
-const playButton = document.getElementById("playBtn");
-playButton.addEventListener("click", game);
+// const playButton = document.getElementById("playBtn");
+// playButton.addEventListener("click", game);
+// let playerselectionRock = document.getElementById("rock");
+// playerselectionRock.addEventListener("click", game);
+// let playerselectionPaper = document.getElementById("paper");
+// playerselectionPaper.addEventListener("click", game);
+// let playerselectionScissors = document.getElementById("scissors");
+// playerselectionScissors.addEventListener("click", game);
 
 function playRound(playerSelection, computerSelection) {
-  playerSelection = prompt("Make your choice");
-  let caseConvertUserInput = playerSelection.toLowerCase();
-  playerSelection = caseConvertUserInput;
+  // playerSelection = prompt("Make your choice");
+  // let caseConvertUserInput = playerSelection.toLowerCase();
+  // playerSelection = caseConvertUserInput;
 
   const choices = ["rock", "paper", "scissors"];
 
