@@ -83,18 +83,21 @@ body {
 .playgrid {
   display: grid;
   grid-area: play;
-  grid-template-columns: 5% 40% 10% 5%;
+  grid-template-columns: 60% 40%;
   grid-template-rows: auto;
-  grid-template-areas: ". choose  result  .";
+  grid-template-areas: "choose  result";
   direction: row;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .choose {
   display: grid;
   grid-area: choose;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   grid-template-rows: auto;
-  grid-template-areas: "rock  paper scissors  result";
+  /* grid-gap: 1rem; */
+  grid-template-areas: "rock  paper scissors";
   border-left: 5px solid rgb(16, 104, 148);
   border-top: 5px solid rgb(16, 104, 148);
   border-bottom: 5px solid rgb(16, 104, 148);
@@ -104,27 +107,34 @@ body {
   background-image: url(../assets/images/rock.png);
   background-size: contain;
   background-repeat: no-repeat;
+  width: 74px;
+  height: 100px;
 }
 
 #paper {
   background-image: url(../assets/images/paper.png);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 5rem;
+
+  width: 74px;
+  height: 100px;
+  /* padding-right: 3rem; */
+  padding: 1rem;
 }
 
 #scissors {
   background-image: url(../assets/images/scissorts.png);
   background-size: contain;
   background-repeat: no-repeat;
+  width: 74px;
+  height: 100px;
 }
 
 .result {
   display: grid;
   grid-area: result;
   background-color: #32c4d2;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2rem;
   border-right: 5px solid rgb(16, 104, 148);
   border-top: 5px solid rgb(16, 104, 148);
   border-bottom: 5px solid rgb(16, 104, 148);

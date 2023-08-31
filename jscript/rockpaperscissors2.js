@@ -5,15 +5,7 @@ let computerSelection;
 let element;
 let result;
 let start;
-
-const choices = ["rock", "paper", "scissors"];
-
-function getComputerChoice() {
-  let randomChoice = choices[Math.floor(Math.random() * choices.length)];
-  return randomChoice;
-}
-
-computerSelection = getComputerChoice();
+let finished;
 
 const choose = document.querySelectorAll(".choose button");
 choose.forEach((choose) => {
@@ -21,6 +13,15 @@ choose.forEach((choose) => {
 });
 
 function processClick() {
+  const choices = ["rock", "paper", "scissors"];
+
+  function getComputerChoice() {
+    let randomChoice = choices[Math.floor(Math.random() * choices.length)];
+    return randomChoice;
+  }
+
+  computerSelection = getComputerChoice();
+
   result = "click";
   getComputerChoice();
   window.playerSelection = this.id;
@@ -75,7 +76,7 @@ function processClick() {
   ) {
     result = "you win";
     document.getElementById("matchOutcome").innerHTML = result;
-  }
+  } else return processClick();
 }
 
 // document.getElementById("matchOutcome").innerHTML = result;
