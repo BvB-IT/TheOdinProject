@@ -6,6 +6,7 @@ body {
   height: 100vh;
   background-color: #191054;
   max-width: 64rem;
+  /* box-sizing: content-box; */
 }
 
 .outergrid {
@@ -20,48 +21,73 @@ body {
     "footer";
   background: linear-gradient(#75167f, #32c4d2);
   margin: 1rem;
-  /* justify-content: center; */
-}
-
-.topnav {
-  grid-area: nav;
-
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .topnav_items {
-  display: grid;
+  grid-area: nav;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   grid-template-rows: auto;
-  grid-template-areas: "logo logo home contact links";
-  border: 5px solid rgba(106, 5, 106, 0.7);
-  border-radius: 5px 5px;
+  grid-template-areas: "home rules highscore contact links";
+  border: #48064f 5px solid;
+  box-shadow: 10px 5px 5px #580861;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: -3rem;
+  margin-right: 1rem;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  border-radius: 25px;
 }
 
 #logo {
-  grid-area: logo;
+  display: inline-block;
+  position: relative;
+  top: 0.5rem;
+  left: 2rem;
+  width: 180px;
+  height: 75px;
   background-image: url(../assets/images/logorockpaperscissors.png);
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 2rem;
-  margin-left: 1rem;
+  background-color: #712184;
+  border: 5px solid rgba(106, 5, 106, 1);
+  box-shadow: 10px 5px 5px #580861;
+  border-radius: 25px;
 }
 
 #home {
   display: grid;
   grid-area: home;
+  margin-left: 2rem;
+  padding: 1rem;
+}
+
+#rules {
+  display: grid;
+  grid-area: rules;
+  padding: 1rem;
+}
+
+#highscore {
+  display: grid;
+  grid-area: highscore;
+  padding: 1rem;
 }
 
 #contact {
   display: grid;
   grid-area: contact;
+  padding: 1rem;
 }
 
 #links {
   display: grid;
   grid-area: links;
+  /* padding: 1rem; */
+  margin-right: 1rem;
+  background-color: #370768;
 }
 
 .banner {
@@ -75,20 +101,24 @@ body {
   padding-bottom: 8rem;
   padding-right: 20rem;
   padding-left: 20rem;
-  margin: 1rem;
-  margin-top: 0;
-  /* align-content: center; */
+  margin: 2rem;
+  border: #191054 5px solid;
+  border-radius: 25px;
+  box-shadow: #191054 10px 5px 5px;
+  border-radius: 25px;
 }
 
 .playgrid {
   display: grid;
   grid-area: play;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 80% 20%;
   grid-template-rows: auto;
   grid-template-areas: "choose  result";
   direction: row;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin: 2rem;
+  /* background-color: rgba(50, 196, 210, 0.2); */
+  background: linear-gradient(#75167f, #32c4d2, 0.5);
+  /* opacity: 0.5; */
 }
 
 .choose {
@@ -96,51 +126,81 @@ body {
   grid-area: choose;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto;
-  /* grid-gap: 1rem; */
   grid-template-areas: "rock  paper scissors";
-  border-left: 5px solid rgb(16, 104, 148);
-  border-top: 5px solid rgb(16, 104, 148);
-  border-bottom: 5px solid rgb(16, 104, 148);
+  justify-content: space-evenly;
 }
 
 #rock {
   background-image: url(../assets/images/rock.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 74px;
-  height: 100px;
+  width: 115px;
+  height: 155px;
+  border: 5px solid #580861;
+  box-shadow: 10px 5px 5px #580861;
+  border-radius: 25px;
 }
 
 #paper {
   background-image: url(../assets/images/paper.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-
-  width: 74px;
-  height: 100px;
-  /* padding-right: 3rem; */
-  padding: 1rem;
+  width: 115px;
+  height: 155px;
+  border: 5px solid rgb(106, 5, 106);
+  box-shadow: 10px 5px 5px #580861;
+  border-radius: 25px 25px;
 }
 
 #scissors {
-  background-image: url(../assets/images/scissorts.png);
+  background-image: url(../assets/images/scissors.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 74px;
-  height: 100px;
+  width: 115px;
+  height: 155px;
+  border: 5px solid rgb(106, 5, 106);
+  box-shadow: 10px 5px 5px #580861;
+  border-radius: 25px 25px;
 }
 
-.result {
+#matchOutcome {
   display: grid;
+  background-image: url(../assets/images/play.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
   grid-area: result;
-  background-color: #32c4d2;
-  padding: 2rem;
-  border-right: 5px solid rgb(16, 104, 148);
-  border-top: 5px solid rgb(16, 104, 148);
-  border-bottom: 5px solid rgb(16, 104, 148);
+  background-color: #37b7cc;
+  /* background: linear-gradient(#32687d, #32c4d2, #75167f); */
+  box-shadow: 10px 5px 5px #580861;
+  /* opacity: 0.6; */
+  width: 115px;
+  height: 155px;
+  border: 5px solid rgb(106, 5, 106);
+  border-radius: 25px;
 }
 
 .description {
   padding-top: 5rem;
   padding-bottom: 5rem;
+  margin: 2rem;
+  background-color: rgba(205, 126, 47, 0.5);
+  border: #3e0644 5px solid;
+  box-shadow: #580861 10px 5px 5px;
+  border-radius: 25px;
+  background: linear-gradient(
+    to right,
+    #a73ab3,
+    #5f0869,
+    #370768,
+    #d08a30,
+    #fcb969
+  );
+}
+
+#gamerules {
+  background-color: rgba(106, 5, 106, 0.6);
+  margin: 2rem;
+  padding: 2rem;
 }
